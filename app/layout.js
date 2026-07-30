@@ -44,8 +44,8 @@ const nephilm = localFont({
 
 export const metadata = {
   metadataBase: new URL('https://hiranandanipanvelfortunecity.com'),
-  title: 'Hiranandani Fortune City | Luxury 2 & 3 BHK Homes in Panvel, Navi Mumbai',
-  description: "Hiranandani Fortune City — A vibrant mixed-use landmark development in Panvel, Navi Mumbai by Hiranandani Group. Luxurious 2 & 3 BHK apartments and 2 BHK Balcony Homes starting at ₹1.20 Cr*.",
+  title: 'Hiranandani Fortune City Panvel | 2, 3 & 4 BHK Luxury Homes',
+  description: 'Discover Hiranandani Fortune City in Panvel, Navi Mumbai. Offering luxury 2, 3 & 4 BHK sports-themed residences starting at ₹1.20 Cr* with 80+ amenities.',
   icons: {
     icon: faviconImage,
     shortcut: faviconImage,
@@ -55,8 +55,8 @@ export const metadata = {
     canonical: 'https://hiranandanipanvelfortunecity.com',
   },
   openGraph: {
-    title: 'Hiranandani Fortune City | Luxury Integrated Township in Panvel',
-    description: "Discover luxurious 2 & 3 BHK apartments at Hiranandani Fortune City, an integrated landmark development in Panvel, Navi Mumbai.",
+    title: 'Hiranandani Fortune City Panvel | 2, 3 & 4 BHK Luxury Homes',
+    description: 'Discover Hiranandani Fortune City in Panvel, Navi Mumbai. Offering luxury 2, 3 & 4 BHK sports-themed residences starting at ₹1.20 Cr* with 80+ amenities.',
     url: 'https://hiranandanipanvelfortunecity.com',
     siteName: 'Hiranandani Fortune City',
     images: [
@@ -72,8 +72,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hiranandani Fortune City | Luxury 2 & 3 BHK Homes in Panvel',
-    description: "A vibrant mixed-use landmark development in Panvel, Navi Mumbai by Hiranandani Group.",
+    title: 'Hiranandani Fortune City Panvel | 2, 3 & 4 BHK Luxury Homes',
+    description: 'Discover Hiranandani Fortune City in Panvel, Navi Mumbai. Offering luxury 2, 3 & 4 BHK sports-themed residences starting at ₹1.20 Cr* with 80+ amenities.',
     images: ['/projects/iris-tower.jpg'],
   },
 }
