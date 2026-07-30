@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://hiranandanifortune.in/sitemap.xml',
+    sitemap: 'https://hiranandanipanvelfortunecity.com/sitemap.xml',
   }
 }

@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://hiranandanifortune.in'
+  const baseUrl = 'https://hiranandanipanvelfortunecity.com'
   return [
     {
       url: baseUrl,
