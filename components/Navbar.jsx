@@ -83,7 +83,7 @@ const Navbar = ({ setIsOpen }) => {
           width: 96% !important;
           max-width: 1550px !important;
           height: 64px !important;
-          padding: 0 40px !important;
+          padding: 0 24px !important;
           margin: 0 auto;
           background: rgba(15, 23, 42, 0.38) !important;
           backdrop-filter: blur(20px);
@@ -127,7 +127,17 @@ const Navbar = ({ setIsOpen }) => {
           transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .header_style2.sticky .header_navigation2 li.nav-item {
+        .header_style2 .header_navigation2 li.nav-item:first-child,
+        .header_style2 .header_navigation2 li.nav-item:last-child,
+        .header_style2.scrolled-up-expanded .header_navigation2 li.nav-item:first-child,
+        .header_style2.scrolled-up-expanded .header_navigation2 li.nav-item:last-child {
+          flex: 1.6 1 0% !important;
+          max-width: 450px !important;
+        }
+
+        .header_style2.sticky .header_navigation2 li.nav-item,
+        .header_style2.sticky .header_navigation2 li.nav-item:first-child,
+        .header_style2.sticky .header_navigation2 li.nav-item:last-child {
           flex: 0 1 0% !important;
           max-width: 0px !important;
           opacity: 0 !important;
@@ -183,13 +193,14 @@ const Navbar = ({ setIsOpen }) => {
         .header_style2.scrolled-up-expanded .header_navigation2 li a.phone-btn {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 6px;
           background: transparent !important;
-          padding: 6px 15px !important;
+          padding: 6px 12px !important;
           border-radius: 50px;
           border: 1px solid rgba(255, 255, 255, 0.35) !important;
           color: #ffffff !important;
-          font-size: 13.5px !important;
+          font-size: 13px !important;
+          letter-spacing: 0.5px !important;
           box-shadow: none !important;
         }
 
