@@ -43,7 +43,7 @@ const Hero = ({ setIsOpen }) => {
           bottom: 0;
           left: 0;
           z-index: 10;
-          padding: 100px 80px 72px 44px;
+          padding: 80px 80px 24px 44px;
           width: 100%;
           max-width: 800px;
           background: radial-gradient(
@@ -206,6 +206,9 @@ const Hero = ({ setIsOpen }) => {
             height: 100%;
             object-fit: cover;
             object-position: center center;
+          }
+          .hero-content {
+            padding: 80px 80px 24px 48px !important;
           }
         }
 
