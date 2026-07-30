@@ -1,9 +1,10 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { overviewImage } from '../lib/images'
 
 const Overview = ({ setIsOpen }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
 
   return (
   <section
@@ -144,28 +145,57 @@ const Overview = ({ setIsOpen }) => {
               <div className="w-16 h-[1px] bg-[#7d9b93]"></div>
             </div>
             
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style={{ fontSize: '16px', fontFamily: '"Poppins", sans-serif', color: '#333', textAlign: 'justify', marginBottom: '20px', lineHeight: '1.8' }}>
-              Hiranandani Fortune City in Panvel, Offers Luxurious 2 &amp; 3 BHK Apartments at Panvel, Navi Mumbai. Hiranandani Fortune City Present 2 BHK Balcony Homes At ₹1.44Cr. A vibrant mixed-use area, Hiranandani Fortune City provides a wealth of chances for leisure, socializing, and expressing one&apos;s culture. Experience the well-designed apartments, lively shops, and state-of-the-art offices that are tucked away in Hiranandani Business Park and perfectly exemplify the Live, Work, and Play concept. Beyond the opulent living areas, this enormous complex offers an unmatched living experience with its stunning design, expansive landscaped gardens, opulent clubhouse, and plenty of parking.
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style={{
+              fontSize: '16px',
+              fontFamily: '"Poppins", sans-serif',
+              color: '#333',
+              textAlign: 'justify',
+              lineHeight: '1.8',
+              marginBottom: '24px',
+              transition: 'all 0.3s ease'
+            }}>
+              Welcome to The Arena at Hiranandani Fortune City, Panvel—a premium sports-themed residential destination designed for those who aspire to live an active, connected, and luxurious lifestyle. Spread across a 10.19-acre land parcel with 80% open spaces, The Arena offers thoughtfully crafted 2, 3 &amp; 4 BHK luxury residences surrounded by expansive green landscapes and world-class recreational facilities. Residents enjoy access to 80+ active-life amenities, 10+ outdoor sports arenas, and the iconic 90,000+ sq. ft. Club Royale, one of the largest clubhouses in Mumbai 3.0
+              {!isExpanded ? (
+                <>
+                  <span>... </span>
+                  <span
+                    onClick={() => setIsExpanded(true)}
+                    className="text-[#000242] font-bold text-[15px] cursor-pointer hover:text-[#C9A96E] hover:underline inline-flex items-center ml-1 whitespace-nowrap transition-colors duration-200"
+                  >
+                    Read More ▼
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span>. Located within the well-established Hiranandani Fortune City township, the project benefits from fully operational social infrastructure including a school, retail, restaurants, healthcare facilities, and seamless connectivity to the Navi Mumbai International Airport, Atal Setu, Metro, and major expressways. Backed by 45+ years of Hiranandani&apos;s legacy, The Arena brings together exceptional architecture, nature-inspired living, and future-ready infrastructure to create a truly elevated lifestyle experience. </span>
+                  <span
+                    onClick={() => setIsExpanded(false)}
+                    className="text-[#000242] font-bold text-[15px] cursor-pointer hover:text-[#C9A96E] hover:underline inline-flex items-center ml-1 whitespace-nowrap transition-colors duration-200"
+                  >
+                    Read Less ▲
+                  </span>
+                </>
+              )}
             </p>
             
-            <p className="boldp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" style={{ fontSize: '16px', fontFamily: '"Poppins", sans-serif', fontWeight: '700', color: '#333', marginBottom: '40px' }}>
+            <p className="boldp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" style={{ fontSize: '15px', fontFamily: '"Poppins", sans-serif', fontWeight: '600', color: '#333', marginBottom: '28px' }}>
               Register Your Interest Today to Access Exclusive Offers, Pricing &amp; Priority Unit Selection.
             </p>
             
             {/* Info Boxes */}
             <div 
-              className="flex flex-col md:flex-row border border-[#d3be8a] rounded-2xl overflow-hidden" 
+              className="flex flex-col md:flex-row border border-[#d3be8a] rounded-xl overflow-hidden w-full shadow-sm" 
               data-aos="fade-up" 
               data-aos-duration="1000" 
               data-aos-delay="200"
             >
-              <div className="w-full md:w-1/2 p-4 md:p-5 border-b md:border-b-0 md:border-r border-[#d3be8a] flex flex-col justify-center">
-                <p style={{ color: '#999', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '6px' }}>Payment Plan:</p>
-                <h3 style={{ color: '#000', fontSize: '15px', fontWeight: '700', textTransform: 'uppercase' }}>10:20:70 PAYMENT PLAN<br/>STRUCTURE</h3>
+              <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-[#d3be8a] flex flex-col justify-center bg-[#fdfbf7]" style={{ padding: '16px 24px' }}>
+                <p style={{ color: '#7a7a7a', fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '4px', fontWeight: '600' }}>Payment Plan:</p>
+                <h3 style={{ color: '#000242', fontSize: '14px', fontWeight: '700', textTransform: 'uppercase', lineHeight: '1.4' }}>10:20:70 PAYMENT PLAN<br/>STRUCTURE</h3>
               </div>
-              <div className="w-full md:w-1/2 p-4 md:p-5 flex flex-col justify-center">
-                <p style={{ color: '#999', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '6px' }}>Configurations:</p>
-                <h3 style={{ color: '#000', fontSize: '15px', fontWeight: '700', textTransform: 'uppercase' }}>LUXURIOUS 2 &amp; 3 BHK HOMES<br/>STARTING AT ₹1.20 CR*</h3>
+              <div className="w-full md:w-1/2 flex flex-col justify-center bg-[#fdfbf7]" style={{ padding: '16px 24px' }}>
+                <p style={{ color: '#7a7a7a', fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '4px', fontWeight: '600' }}>Configurations:</p>
+                <h3 style={{ color: '#000242', fontSize: '14px', fontWeight: '700', textTransform: 'uppercase', lineHeight: '1.4' }}>LUXURIOUS 2, 3 &amp; 4 BHK HOMES<br/>STARTING AT ₹1.20 CR*</h3>
               </div>
             </div>
 

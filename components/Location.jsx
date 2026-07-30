@@ -6,14 +6,17 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const locationLandmarks = [
-  { name: 'Hiranandani Business Park', dist: '1 min' },
-  { name: 'Old Mumbai-Pune Highway (NH-4)', dist: '2 mins' },
-  { name: 'Mumbai-Pune Expressway', dist: '5 mins' },
-  { name: 'Panvel Railway Station', dist: '10 mins' },
-  { name: 'Sion-Panvel Expressway', dist: '12 mins' },
-  { name: 'Navi Mumbai International Airport (NMIA)', dist: '20 mins' },
-  { name: 'Atal Setu (MTHL Bridge)', dist: '25 mins' },
-  { name: 'Jawaharlal Nehru Port Trust (JNPT)', dist: '25 mins' },
+  { name: 'National Highway 48', dist: '400 m' },
+  { name: 'Yotta NM1 Corporate Office', dist: '600 m' },
+  { name: 'Chhatrapati Shivaji Maharaj University', dist: '5.1 km' },
+  { name: 'Pulse Multispeciality Hospital', dist: '6.7 km' },
+  { name: 'St. Vincent Pallotti School', dist: '5.6 km' },
+  { name: 'Mohope Railway Station', dist: '5.6 km' },
+  { name: 'NISM Cricket Ground', dist: '7.3 km' },
+  { name: 'Shivganga Waterpark', dist: '10 km' },
+  { name: 'Little World Mall', dist: '22.3 km' },
+  { name: 'Navi Mumbai International Airport', dist: '28.9 km' },
+  { name: 'Chhatrapati Shivaji Maharaj Int. Airport', dist: '53.5 km' },
 ]
 
 const Location = () => {
@@ -136,32 +139,17 @@ const Location = () => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-              <img 
-                src={locationImage} 
-                alt="Hiranandani Fortune City Panvel Location & Connectivity Map" 
-                className="w-full h-[400px] object-cover filter blur-[2px] group-hover:blur-0 transition-all duration-500 scale-105 group-hover:scale-100" 
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.3712510297014!2d73.19938247520138!3d18.914954582256673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e840eed12c3d%3A0x60eb4a5c736943f5!2sHiranandani%20Fortune%20City%20Panvel!5e0!3m2!1sen!2sin!4v1785393520598!5m2!1sen!2sin" 
+                className="w-full h-[400px] sm:h-[460px] lg:h-full min-h-[400px]" 
+                style={{ width: '100%', border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Hiranandani Fortune City Panvel Location"
               />
-              <style jsx>{`
-                .location-responsive-map {
-                  width: 100%;
-                  height: 100%;
-                  max-height: 100%;
-                  object-fit: contain;
-                  display: block;
-                  transition: transform 0.6s ease;
-                }
-                .location-responsive-map:hover {
-                  transform: scale(1.02);
-                }
-                @media (max-width: 1023px) {
-                  .location-responsive-map {
-                    height: auto !important;
-                    aspect-ratio: 3 / 2;
-                  }
-                }
-              `}</style>
               <div style={{
-                position: 'absolute', bottom: '16px', left: '16px', zIndex: 10,
+                position: 'absolute', top: '16px', right: '16px', zIndex: 10,
                 background: 'var(--color-gold, #c9a96e)', opacity: 0.95, backdropFilter: 'blur(6px)',
                 borderRadius: '8px', padding: '6px 14px',
                 display: 'flex', alignItems: 'center', gap: '6px',

@@ -176,7 +176,7 @@ const Hero = ({ setIsOpen }) => {
 
         @keyframes heroZoomInOut {
           0% { transform: scale(1); }
-          50% { transform: scale(1.1); }
+          50% { transform: scale(1.02); }
           100% { transform: scale(1); }
         }
 
@@ -205,7 +205,7 @@ const Hero = ({ setIsOpen }) => {
           .hero-image {
             height: 100%;
             object-fit: cover;
-            object-position: center 80%;
+            object-position: center center;
           }
         }
 
@@ -241,7 +241,7 @@ const Hero = ({ setIsOpen }) => {
           .hero-image {
             height: 100%;
             object-fit: cover;
-            object-position: center 80%;
+            object-position: center center;
           }
           .hero-content {
             padding: 0 28px 56px !important;
@@ -359,8 +359,8 @@ const Hero = ({ setIsOpen }) => {
           }
         `}} />
 
-      {/* ── Responsive Image Carousel (All Devices) ── */}
-      <div className="hero-slider-wrapper grid">
+      {/* ── Responsive Image Carousel (Desktop & Tablet only) ── */}
+      <div className="hero-slider-wrapper hidden md:grid">
         {slides.map((slide, index) => (
           <div 
             key={index} 
@@ -378,6 +378,19 @@ const Hero = ({ setIsOpen }) => {
             />
           </div>
         ))}
+      </div>
+
+      {/* ── Single Static Banner Image (Mobile Devices only - Complete Uncropped View) ── */}
+      <div className="block md:hidden relative w-full bg-[#0F172A]">
+        <Image
+          src={heroImages.smDevice || '/images/hero/smDevice.webp'}
+          alt="Hiranandani Fortune City Mobile Banner"
+          width={1000}
+          height={1000}
+          className="w-full h-auto object-contain block"
+          priority
+          sizes="100vw"
+        />
       </div>
 
       {/* ── Dark overlay for text legibility ── */}
@@ -399,11 +412,11 @@ const Hero = ({ setIsOpen }) => {
         {/* Bullet Points */}
         <div className="hero-bullets" style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           {[
-            'A World-Class Lifestyle & Seamless Connectivity',
-            '10:20:70 Payment Plan Structure',
-            'Luxurious 2 & 3 BHK Apartments In Panvel',
-            'Vibrant Mixed-Use Area With Business Park',
-            'Live In Comfort And Style'
+            '80% Open Spaces Across a 10.19-Acre Development',
+            'Sports-Themed Homes with 80+ Lifestyle Amenities ',
+            'The Biggest Ever Clubhouse In Mumbai 3.0',
+            'Every Tower Overlooks Forests, Hills & River',
+            '45+ Years of Hiranandani Township Excellence'
           ].map((text, i) => (
           <div key={i} className="hero-bullet-item" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand, #C9A96E)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, backgroundColor: '#fff', borderRadius: '50%', padding: '2px' }}>
@@ -418,7 +431,7 @@ const Hero = ({ setIsOpen }) => {
 
         {/* Price Line */}
         <p className="hero-price-line" style={{ marginBottom: '0px' }}>
-          Luxurious 2 &amp; 3 BHK Homes
+          Luxurious 2, 3 &amp; 4 BHK Homes
           <span style={{ marginLeft: '6px', marginRight: '6px' }}>
             Price Starts
           </span>

@@ -179,7 +179,7 @@ const Projects = ({ setIsOpen }) => {
           <div className="w-full lg:w-1/2 project-content-box">
             <h3 className="project-title">HIRANANDANI FORTUNE CITY - RESIDENTIAL</h3>
             <p className="project-desc">
-              The residential sector of Hiranandani Fortune City in Panvel, Navi Mumbai offers luxury 2 &amp; 3 BHK apartments, including stunning 2 BHK Balcony Homes. Designed for elevated elegance with breathtaking views and abundant natural light, each residence is crafted with top-tier finishes. Residents enjoy seamless access to an opulent clubhouse, landscaped community gardens, swimming pool, sports arenas, and ample covered parking.
+              The residential sector of Hiranandani Fortune City in Panvel, Navi Mumbai offers luxury 2, 3 &amp; 4 BHK apartments, including stunning 2 BHK Balcony Homes. Designed for elevated elegance with breathtaking views and abundant natural light, each residence is crafted with top-tier finishes. Residents enjoy seamless access to an opulent clubhouse, landscaped community gardens, swimming pool, sports arenas, and ample covered parking.
             </p>
             <button
               className="explore-btn"

@@ -1,36 +1,38 @@
 'use client'
+import React from 'react'
+import { Trees, GraduationCap, Server, HeartPulse, Landmark, HeartHandshake } from 'lucide-react'
 
 const Highlights = () => {
-  const cards = [
+  const highlightItems = [
     {
-      num: '01',
-      title: 'A WORLD-CLASS LIFESTYLE',
-      desc: "Experience well-designed luxurious apartments, lively retail shops, and state-of-the-art offices that perfectly exemplify the Live, Work, and Play concept.",
+      icon: <Trees size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Nature-Led Township',
+      desc: 'Reserve Forest, River & 1.2 Lakh Trees',
     },
     {
-      num: '02',
-      title: '10:20:70 PAYMENT PLAN',
-      desc: "An attractive and hassle-free 10:20:70 Payment Plan Structure tailored to provide maximum peace of mind and security for home buyers and investors.",
+      icon: <GraduationCap size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Live. Learn. Grow.',
+      desc: 'School, Retail & Daily Conveniences Inside',
     },
     {
-      num: '03',
-      title: 'SEAMLESS CONNECTIVITY',
-      desc: "Strategically located in Panvel, Navi Mumbai, offering unmatched connectivity to major business hubs, expressways, railway stations, and the upcoming airport.",
+      icon: <Server size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Digital Growth Hub',
+      desc: "Neighbouring Asia's Largest Yotta Data Center",
     },
     {
-      num: '04',
-      title: 'LIVE IN COMFORT & STYLE',
-      desc: "Presenting exquisite 2 &amp; 3 BHK apartments and stunning 2 BHK Balcony Homes starting at ₹1.20 Cr*, crafted with superior finishes and optimal ventilation.",
+      icon: <HeartPulse size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Always Connected',
+      desc: '24×7 Health Centre & Emergency Ambulance',
     },
     {
-      num: '05',
-      title: 'VIBRANT MIXED-USE TOWNSHIP',
-      desc: "A vibrant mixed-use community providing a wealth of opportunities for leisure, socializing, fine dining, and expressing culture right beside Hiranandani Business Park.",
+      icon: <Landmark size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'A Landmark Community',
+      desc: "Panvel's First Integrated Hiranandani Township",
     },
     {
-      num: '06',
-      title: 'OPULENT CLUBHOUSE & GARDENS',
-      desc: "Beyond the opulent living spaces, this magnificent complex offers expansive landscaped gardens, an elite socio-recreational clubhouse, and ample parking.",
+      icon: <HeartHandshake size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Designed for Generations',
+      desc: 'Heritage, Nature & Community Living Combined',
     },
   ]
 
@@ -152,94 +154,27 @@ const Highlights = () => {
           <div style={{ position: 'absolute', top: -1, left: -1, width: '24px', height: '24px', borderTop: '1.5px solid #d3be8a', borderLeft: '1.5px solid #d3be8a', borderTopLeftRadius: '20px' }}></div>
           <div style={{ position: 'absolute', top: -1, right: -1, width: '24px', height: '24px', borderTop: '1.5px solid #d3be8a', borderRight: '1.5px solid #d3be8a', borderTopRightRadius: '20px' }}></div>
           <div style={{ position: 'absolute', bottom: -1, left: -1, width: '24px', height: '24px', borderBottom: '1.5px solid #d3be8a', borderLeft: '1.5px solid #d3be8a', borderBottomLeftRadius: '20px' }}></div>
-          <div style={{ position: 'absolute', bottom: -1, right: -1, width: '24px', height: '24px', borderBottom: '1.5px solid #d3be8a', borderRight: '1.5px solid #d3be8a', borderBottomRightRadius: '20px' }}></div>          {/* Item 1 */}
-          <div className="p-10 border-b lg:border-b border-white/20 lg:border-r flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22v-6"></path>
-                <path d="M17 8C17 4.5 14.5 2 12 2S7 4.5 7 8c-2.5 0-4.5 2-4.5 4.5 0 2 1.5 3.5 3.5 3.5h12c2 0 3.5-1.5 3.5-3.5C21.5 10 19.5 8 17 8z"></path>
-              </svg>
+          <div style={{ position: 'absolute', bottom: -1, right: -1, width: '24px', height: '24px', borderBottom: '1.5px solid #d3be8a', borderRight: '1.5px solid #d3be8a', borderBottomRightRadius: '20px' }}></div>          {/* Mapped Highlight Items */}
+          {highlightItems.map((item, idx) => (
+            <div 
+              key={idx}
+              className={`p-9 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.04] ${
+                idx < 3 ? 'border-b border-white/20' : 'border-b lg:border-b-0 border-white/20'
+              } ${
+                idx % 3 !== 2 ? 'lg:border-r border-white/20' : ''
+              } ${idx === 5 ? 'border-none' : ''}`}
+            >
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-md transition-transform duration-300 hover:scale-105" style={{ background: '#d3be8a' }}>
+                {item.icon}
+              </div>
+              <h3 className="text-[#d3be8a] font-bold text-[15.5px] uppercase tracking-wider mb-3">
+                {item.title}
+              </h3>
+              <p className="text-white/90 text-[14.5px] leading-relaxed font-medium">
+                {item.desc}
+              </p>
             </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">47.5-ACRES DEVELOPMENT</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Thoughtfully Planned Landmark Development Spread Over 47.5 Acres</p>
-          </div>
-
-          {/* Item 2 */}
-          <div className="p-10 border-b lg:border-b border-white/20 lg:border-r flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                <line x1="9" y1="22" x2="15" y2="22"></line>
-                <line x1="8" y1="6" x2="8" y2="6"></line>
-                <line x1="16" y1="6" x2="16" y2="6"></line>
-                <line x1="12" y1="6" x2="12" y2="6"></line>
-                <line x1="8" y1="10" x2="8" y2="10"></line>
-                <line x1="16" y1="10" x2="16" y2="10"></line>
-                <line x1="12" y1="10" x2="12" y2="10"></line>
-                <line x1="8" y1="14" x2="8" y2="14"></line>
-                <line x1="16" y1="14" x2="16" y2="14"></line>
-                <line x1="12" y1="14" x2="12" y2="14"></line>
-                <line x1="12" y1="18" x2="12" y2="22"></line>
-              </svg>
-            </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">2, 3 BHK &amp; JODI HOMES</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Luxury 2 BHK, 3 BHK, And Jodi Apartments Across 7 Iconic G+36 Towers</p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="p-10 border-b lg:border-b border-white/20 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 22h16"></path>
-                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-              </svg>
-            </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">3-LEVEL CLUBHOUSE</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Exceptionally Designed 3-Level Clubhouse With Curated Amenities</p>
-          </div>
-
-          {/* Item 4 */}
-          <div className="p-10 border-b md:border-b-0 lg:border-r border-white/20 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <path d="M8 11l4-3 4 3v4h-8v-4z"></path>
-              </svg>
-            </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">BEE 4-STAR APPROVED</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Entire Development Is BEE 4-Star Approved For Sustainable Living</p>
-          </div>
-
-          {/* Item 5 */}
-          <div className="p-10 border-b md:border-b-0 lg:border-r border-white/20 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-              </svg>
-            </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">TAJ HOTEL HOSPITALITY</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Exclusive Hospitality Project Introducing The Luxurious Taj Hotel</p>
-          </div>
-
-          {/* Item 6 */}
-          <div className="p-10 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: '#d3be8a' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-                <path d="M12 14v4"></path>
-                <path d="M10 16h4"></path>
-              </svg>
-            </div>
-            <h3 className="text-[#d3be8a] font-bold text-[15px] uppercase tracking-wider mb-3">OLYMPIC-SIZE POOL &amp; MORE</h3>
-            <p className="text-white/80 text-[14px] leading-relaxed">Olympic-Size Pool, Gymnasium, Multipurpose Court &amp; Grand Entrance Lobby</p>
-          </div>
+          ))}
 
         </div>
       </div>

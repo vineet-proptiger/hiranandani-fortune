@@ -27,13 +27,13 @@ const Footer = () => (
         </div>
         <p style={{ fontSize: '15px', color: '#fff', fontFamily: 'var(--font-poppins), sans-serif', lineHeight: 1.8, marginBottom: '24px', textAlign: 'justify' }}
           data-aos="fade-in" data-aos-delay="100">
-          Hiranandani Group presents Hiranandani Fortune City, Navi Mumbai&apos;s premier luxury integrated township in Panvel, offering luxurious 2 &amp; 3 BHK apartments across a vibrant mixed-use development. Thoughtfully curated with an attractive 10:20:70 payment plan structure, world-class leisure amenities, lively retail shops, state-of-the-art offices at Hiranandani Business Park, expansive landscaped gardens, and an opulent clubhouse — Hiranandani Fortune City perfectly exemplifies the Live, Work, and Play concept for an unmatched lifestyle.
+          Hiranandani Group presents Hiranandani Fortune City, Navi Mumbai&apos;s premier luxury integrated township in Panvel, offering luxurious 2, 3 &amp; 4 BHK apartments across a vibrant mixed-use development. Thoughtfully curated with an attractive 10:20:70 payment plan structure, world-class leisure amenities, lively retail shops, state-of-the-art offices at Hiranandani Business Park, expansive landscaped gardens, and an opulent clubhouse — Hiranandani Fortune City perfectly exemplifies the Live, Work, and Play concept for an unmatched lifestyle.
         </p>
         
         {/* RERA Block */}
         <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.05)', padding: '10px 24px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}>
           <span style={{ fontFamily: F_SANS, fontSize: '14px', color: '#aaa' }}>RERA No :</span>
-          <strong style={{ fontFamily: F_JOST, fontSize: '15px', color: '#fff', letterSpacing: '0.04em' }}>Coming Soon</strong>
+          <strong style={{ fontFamily: F_JOST, fontSize: '15px', color: '#fff', letterSpacing: '0.04em' }}>P52000050196</strong>
         </div>
       </div>
 

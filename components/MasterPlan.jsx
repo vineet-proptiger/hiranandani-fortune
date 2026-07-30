@@ -7,27 +7,21 @@ const plans = [
     label: '2 BHK Residence', 
     img: masterplanImages.bhk2,
     details: {
-        // size: '1100 Sq.Ft',
-        carpet: '751-770 SqFt'
+        carpet: '723 - 1103 SqFt'
     }
   },
-  /*
-  { 
-    label: '3 BHK Type 1 (Comfort)', 
-    img: masterplanImages.bhk3,
-    details: {
-        carpet: '1,040 Sq. Ft. (96.61 Sq. Mtr.)',
-        apartment: '1,260 Sq. Ft. (117.05 Sq. Mtr.)',
-        super: '1,450.00 Sq. Ft. (134.70 Sq. Mtr.)'
-    }
-  },
-  */
   { 
     label: '3 BHK Residence', 
-    img: masterplanImages.bhk45,
+    img: masterplanImages.bhk3 || masterplanImages.bhk45,
     details: {
-        // size: '2210 Sq.Ft',
-        carpet: '970-1165 SqFt'
+        carpet: '961 - 1719 SqFt'
+    }
+  },
+  { 
+    label: '4 BHK Residence', 
+    img: masterplanImages.bhk45 || masterplanImages.bhk2,
+    details: {
+        carpet: '1522 - 1896 SqFt'
     }
   },
 ]
@@ -89,7 +83,7 @@ const MasterPlan = ({ setIsOpen }) => {
           )}
 
           {activeTab === 'floor' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[820px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1100px] mx-auto">
               {plans.map((plan, idx) => (
                 <div key={idx} className="bg-white rounded-md overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={idx * 100}>
                   <a onClick={() => setIsOpen && setIsOpen(true)} className="cursor-pointer block relative h-[260px] overflow-hidden group bg-[#fdfbf7] flex items-center justify-center p-4">

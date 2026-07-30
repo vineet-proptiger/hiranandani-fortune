@@ -84,25 +84,18 @@ const Gallery = ({ setIsOpen }) => {
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105" 
               />
-              {/* Premium hover overlay */}
+              {/* Premium label overlay (always visible with subtle enhancement on hover) */}
               <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-5"
-                style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)',
-                }}
+                className="absolute inset-x-0 bottom-0 flex flex-col justify-end p-3.5 md:p-4 transition-all duration-300 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none"
               >
                 <span 
-                  className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
+                  className="text-white font-semibold text-[13px] tracking-wider uppercase transition-transform duration-300 group-hover:translate-x-1"
                   style={{ 
-                    color: '#fff', 
-                    fontFamily: F_JOST, 
-                    fontSize: '11px', 
-                    fontWeight: '600', 
-                    letterSpacing: '0.08em', 
-                    textTransform: 'uppercase' 
+                    fontFamily: F_JOST,
+                    textShadow: '0 1px 6px rgba(0,0,0,0.8)' 
                   }}
                 >
-                  {img.alt ? img.alt.replace('Hiranandani Fortune City - ', '') : 'VIEW PREVIEW'}
+                  {img.label || img.title}
                 </span>
               </div>
             </div>
@@ -206,12 +199,12 @@ const Gallery = ({ setIsOpen }) => {
               className="max-w-full max-h-[80vh] object-contain shadow-2xl transition-all duration-300 rounded"
               onClick={(e) => e.stopPropagation()} 
             />
-            {/* Alt Text Caption */}
+            {/* Label Title Caption */}
             <div 
-              className="mt-4 text-center text-white/80 text-xs md:text-sm tracking-wide max-w-[80vw]"
+              className="mt-4 text-center text-white/90 font-semibold text-sm md:text-base tracking-widest uppercase max-w-[80vw]"
               style={{ fontFamily: F_JOST }}
             >
-              {galleryImages[selectedImgIndex].alt}
+              {galleryImages[selectedImgIndex].label || galleryImages[selectedImgIndex].title}
             </div>
           </div>
         </div>

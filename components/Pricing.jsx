@@ -7,34 +7,34 @@ const GOLD = "#c28522";
 const units = [
   {
     type: "2 BHK",
-    subtitle: "LUXURY HOMES",
-    size: "751-770 SqFt",
+    subtitle: "LUXURY RESIDENCES",
+    size: "723 - 1103 SqFt",
     price: "₹ 1.20 Cr*",
     btnText: "GET DETAILS",
     features: [
       "Unlock Pricing & Floor Plans",
       "10:20:70 Payment Plan Structure",
-      "World-Class Lifestyle & Connectivity",
+      "Live, Work & Play Concept",
     ],
     isPopular: false,
   },
   {
-    type: "2 BHK",
-    subtitle: "BALCONY HOMES",
-    size: "850-900 SqFt",
-    price: "₹ 1.44 Cr*",
+    type: "3 BHK",
+    subtitle: "LUXURY RESIDENCES",
+    size: "961 - 1719 SqFt",
+    price: "Ask For Price",
     btnText: "GET DETAILS",
     features: [
       "Unlock Pricing & Floor Plans",
       "10:20:70 Payment Plan Structure",
-      "Private Balcony & Garden Views",
+      "Live, Work & Play Concept",
     ],
     isPopular: true,
   },
   {
-    type: "3 BHK",
+    type: "4 BHK",
     subtitle: "LUXURY RESIDENCES",
-    size: "970-1165 SqFt",
+    size: "1522 - 1896 SqFt",
     price: "Ask For Price",
     btnText: "GET DETAILS",
     features: [
@@ -113,8 +113,8 @@ const Pricing = ({ setIsOpen }) => {
                   {unit.type} <br /> 
                   <span className="text-[14px] font-semibold">{unit.subtitle}</span>
                 </h3>
-                <p className="text-[11px] font-bold tracking-widest text-gray-500 relative z-10 uppercase mt-1" style={{ fontFamily: F_SANS }}>
-                  SIZE: <span className="text-gray-700 capitalize font-medium">{unit.size}</span>
+                <p className="text-[11.5px] font-medium text-gray-600 relative z-10 mt-1.5" style={{ fontFamily: F_SANS }}>
+                  <span className="font-bold text-gray-800">Carpet Area :</span> {unit.size}
                 </p>
               </div>
 
