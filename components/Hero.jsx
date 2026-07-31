@@ -193,12 +193,12 @@ const Hero = ({ setIsOpen }) => {
           }
         }
 
-        /* ─── Desktop ─── */
+        /* ─── Desktop & Standard Monitors ─── */
         @media (min-width: 1024px) {
           .hero-container {
             width: 100%;
             height: 100vh;
-            min-height: 720px;
+            min-height: 600px;
             max-height: 1100px;
           }
           .hero-slider-wrapper {
@@ -220,7 +220,21 @@ const Hero = ({ setIsOpen }) => {
             object-position: center center;
           }
           .hero-content {
-            padding: 80px 80px 36px 48px !important;
+            padding: 80px 80px 32px 48px !important;
+          }
+        }
+
+        /* ─── Compact Mini Laptops & Ultrabooks (e.g., ASUS VivoBook, 13-inch notebooks) ─── */
+        @media (min-width: 1024px) and (max-height: 720px) {
+          .hero-content {
+            padding: 70px 60px 20px 48px !important;
+          }
+          .hero-bullets {
+            margin-bottom: 14px !important;
+            gap: 6px !important;
+          }
+          .hero-price-line {
+            margin-bottom: 16px !important;
           }
         }
 
