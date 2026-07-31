@@ -196,19 +196,31 @@ const Hero = ({ setIsOpen }) => {
         /* ─── Desktop ─── */
         @media (min-width: 1024px) {
           .hero-container {
-            aspect-ratio: 21/9;
+            width: 100%;
+            height: 100vh;
+            min-height: 720px;
+            max-height: 1100px;
+          }
+          .hero-slider-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
           }
           .slide-layer {
             position: absolute;
+            inset: 0;
+            width: 100%;
             height: 100%;
           }
           .hero-image {
+            width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center center;
           }
           .hero-content {
-            padding: 80px 80px 24px 48px !important;
+            padding: 80px 80px 36px 48px !important;
           }
         }
 
@@ -235,19 +247,30 @@ const Hero = ({ setIsOpen }) => {
         /* ─── Tablet ─── */
         @media (min-width: 768px) and (max-width: 1023px) {
           .hero-container {
-            aspect-ratio: 16/7;
+            width: 100%;
+            height: 75vh;
+            min-height: 550px;
+          }
+          .hero-slider-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
           }
           .slide-layer {
             position: absolute;
+            inset: 0;
+            width: 100%;
             height: 100%;
           }
           .hero-image {
+            width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center center;
           }
           .hero-content {
-            padding: 0 28px 56px !important;
+            padding: 0 28px 46px !important;
           }
         }
 
